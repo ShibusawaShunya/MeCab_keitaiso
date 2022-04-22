@@ -1,24 +1,17 @@
 !pip install mecab-python3
 !pip install unidic-lite
-!pip install japanize_matplotlib
 
-conda install -c anaconda swig
 
 import MeCab
 import re
 import csv
 import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
 
 df = pd.read_csv("aaaa.csv")
 
 df
-
-
-#MeCab等、必要なパッケージをimport
-import MeCab
-import re
-import csv
-
 
 #MeCabのインスタンスを作成する
 mecab = MeCab.Tagger('')
