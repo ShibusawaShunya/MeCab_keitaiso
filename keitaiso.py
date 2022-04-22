@@ -94,3 +94,26 @@ df1.to_csv("test.csv")
 with open('test2.csv', 'w', newline='') as file:
     writer = csv.writer(file, quoting=csv.QUOTE_ALL,delimiter=';')
     writer.writerows(wordcount_output)
+   
+  
+list1 = []
+left = []
+height = []
+
+#上位10番目までを抽出
+for n in range(10):
+    list1.append(wordcount_output[n])
+
+#タプルからリストに変更
+for x, y in list1:
+    left.append(x)
+    height.append(y)
+    
+# グラフの詳細設定
+plt.bar(left, height, width=0.5, color='#0096c8',
+        edgecolor='b', linewidth=2)
+
+#グラフを表示する
+plt.show()
+
+print(list1)
